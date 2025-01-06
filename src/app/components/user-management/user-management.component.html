@@ -1,0 +1,75 @@
+<div class="data-grid">
+  
+  <!-- DevExtreme DataGrid component -->
+  <dx-data-grid [dataSource]="users" [showBorders]="true">
+
+    <!-- Editing options for DataGrid -->
+    <dxo-editing
+      mode="popup"
+      [allowUpdating]="true"
+      [allowAdding]="true"
+      [allowDeleting]="true"
+    ></dxo-editing>
+
+    <!-- Search panel for DataGrid -->
+    <dxo-search-panel
+      [visible]="true"
+      [width]="240"
+      [placeholder]="'Search...'"
+    ></dxo-search-panel>
+
+    <!-- Filter row for DataGrid -->
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+    <!-- Columns definition for DataGrid -->
+    <!-- <dxi-column
+      dataField="profilePhoto"
+      caption="Profile Photo"
+      cellTemplate="photoCell"
+      [validationRules]="[{ type: 'required' }]"
+      [headerFilter]="{ visible: false }"
+    ></dxi-column> -->
+    <dxi-column
+      dataField="firstName"
+      caption="First Name"
+      [validationRules]="[{ type: 'required' }]"
+      [headerFilter]="{ visible: true }"
+    ></dxi-column>
+    <dxi-column
+      dataField="lastName"
+      caption="Last Name"
+      [validationRules]="[{ type: 'required' }]"
+      [headerFilter]="{ visible: true }"
+    ></dxi-column>
+    <dxi-column
+      dataField="age"
+      caption="Age"
+      [validationRules]="[{ type: 'required' }]"
+      [headerFilter]="{ visible: true }"
+    ></dxi-column>
+    <dxi-column
+      dataField="education"
+      caption="Education"
+      [validationRules]="[{ type: 'required' }]"
+      [headerFilter]="{ visible: true }"
+    ></dxi-column>
+    <dxi-column
+      dataField="nationalId"
+      caption="National ID"
+      [validationRules]="[{ type: 'required' }]"
+      [headerFilter]="{ visible: true }"
+    ></dxi-column>
+    <dxi-column
+      dataField="birthDate"
+      caption="Birth Date"
+      [validationRules]="[{ type: 'required' }]"
+      [headerFilter]="{ visible: true }"
+    ></dxi-column>
+
+    <!-- Buttons for editing and deleting rows -->
+    <dxi-column type="buttons">
+      <dxi-button name="edit" icon="edit" class="edit-icon"></dxi-button>
+      <dxi-button name="delete" icon="trash" class="trash-icon"></dxi-button>
+    </dxi-column>
+  </dx-data-grid>
+</div>

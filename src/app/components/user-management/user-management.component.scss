@@ -1,0 +1,74 @@
+// Define color variables
+$color-red: #f46;
+$color-lightGray: #f5f5f5;
+$color-gray: #757575;
+$color-border: #ddd;
+$button-bg-color: #337ab7;
+$button-hover-bg-color: #50a9f7;
+$icon-color: white;
+
+// Styles
+.data-grid {
+  padding: 30px;
+  margin-top: 40px;
+}
+
+::ng-deep {
+  .dx-command-edit {
+    background-color: $color-lightGray;
+  }
+
+  .dx-datagrid-action {
+    color: $color-gray !important;
+    background-color: $color-lightGray;
+    text-align: center !important;
+    font-family: Vazirmatn, "sans-serif" !important;
+  }
+
+  .dx-data-row {
+    border-bottom: 1px solid $color-border !important;
+    td {
+      text-align: center !important;
+    }
+  }
+  .dx-icon-trash {
+    color: $color-red !important;
+  }
+
+  .dx-editor-cell {
+    .dx-texteditor,
+    .dx-texteditor .dx-texteditor-input {
+      background-color: $color-lightGray;
+    }
+  }
+
+  .dx-bordered-top-view,
+  .dx-datagrid-content {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  .dx-bordered-bottom-view {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+
+  .dx-datagrid-header-panel {
+    .dx-toolbar-after {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dx-button-mode-contained {
+      .dx-icon {
+        color: $icon-color;
+      }
+      background-color: $button-bg-color;
+      border-color: $button-bg-color;
+      &.dx-state-hover {
+        background-color: $button-hover-bg-color;
+        border-color: $button-hover-bg-color;
+      }
+    }
+  }
+}
